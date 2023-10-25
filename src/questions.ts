@@ -59,33 +59,108 @@ const questionBank: QuestionBank = [
   },
   {
     id: 3,
-    topic: Topic.MARKETING,
+    topic: Topic.PORTFOLIO,
     questions: [
       {
         type: "scale",
         question:
-          "I feel confident selling myself as a personal/professional brand",
+          "I feel confident that the portfolio I have built translates my craft, skills or experience",
       },
       {
         type: "checklist",
-        prompt: "I feel confident selling myself as a personal brand ....",
+        prompt:
+          "I have a digital, publically available platform that articulates what I do",
         checklist: [
           {
-            weighting: 9,
-            content: "Social Media Presence",
+            weighting: 5,
+            content: "Website",
           },
+          {
+            weighting: 5,
+            content: "Spotify/Mixcloud",
+          },
+          { weighting: 5, content: "Vimeo" },
+          {
+            weighting: 5,
+            content: "Instagram",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 4,
+    topic: Topic.PORTFOLIO,
+    questions: [
+      {
+        type: "scale",
+        question:
+          "I feel confident that my skills are translated through my chosen format of showing my work.",
+      },
+      {
+        type: "checklist",
+        prompt:
+          "My portfolio consists of/ I have the following documentation to hand",
+        checklist: [
           {
             weighting: 3,
-            content: "Storytelling",
+            content: "Experience/ Career History",
           },
-          { weighting: 5, content: "Phyiscal Marketing Materials e.g QR code" },
           {
-            weighting: 1,
-            content: "Name that you freelance under",
+            weighting: 5,
+            content: "previous work that I can share with a potential client",
+          },
+          {
+            weighting: 4,
+            content:
+              "Previous work in a public location that a potential client could see, and then approach me",
           },
           {
             weighting: 2,
-            content: "Logo",
+            content: "Biography",
+          },
+          {
+            weighting: 4,
+            content: "Core Skills",
+          },
+          {
+            weighting: 2,
+            content: "Preferred ways of working",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    topic: Topic.PORTFOLIO,
+    questions: [
+      {
+        type: "scale",
+        question: "I feel confident asking for feedback from peers or clients",
+      },
+      {
+        type: "checklist",
+        prompt: "How often do you ask for feedback on your portfolio?",
+        checklist: [
+          {
+            weighting: 5,
+            content:
+              "I regularly seek feedback on my portfolio, typically after each major project.",
+          },
+          {
+            weighting: 5,
+            content:
+              "I ask for feedback on my portfolio occasionally, perhaps once or twice a year.",
+          },
+          {
+            weighting: 5,
+            content:
+              "I rarely seek feedback on my portfolio, only when I make significant changes.",
+          },
+          {
+            weighting: 5,
+            content: "I have never asked for feedback on my portfolio.",
           },
         ],
       },

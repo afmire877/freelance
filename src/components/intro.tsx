@@ -33,47 +33,13 @@ export default function Intro() {
         stand
       </div>
       <div className="mt-9 w-[319px] max-w-full text-xl font-bold leading-7 text-black max-md:ml-1">
-        <ul>
-          <li>
-            <span className="">This quiz is divided into </span>
-          </li>
-          <li>
-            <span className="font-bold">6 sections</span>
-          </li>
-          <li>
-            <span className="">
-              {" "}
-              tailored to provide insights about your freelancing journey.
-            </span>
-          </li>
-          <li>Set aside approximately </li>
-          <li>
-            <span className="font-bold">30 minutes</span>
-          </li>
-          <li>
-            <span className="">
-              {" "}
-              to complete the quiz. This ensures you can thoughtfully answer
-              each question.
-            </span>
-          </li>
-          <li>Once you've completed the quiz, you'll receive a </li>
-          <li>
-            <span className="font-bold">personalised report</span>
-          </li>
-          <li>
-            <span className=""> offering suggestions for improvement.tt</span>
-          </li>
-          <li>
-            We'll guide you on the next steps, which may include a consultation{" "}
-          </li>
-          <li>
-            <span className="font-bold">1-2-1 call</span>
-          </li>
-          <li>
-            <span className=""> with our team.</span>
-          </li>
-        </ul>
+        This quiz is divided into 6 sections tailored to provide insights about
+        your freelancing journey. <br /> Set aside approximately 30 minutes to
+        complete the quiz. This ensures you can thoughtfully answer each
+        question. Once you've completed the quiz, you'll receive a personalised
+        report offering suggestions for improvement. <br /> We'll guide you on
+        the next steps, which may include a consultation 1-2-1 call with our
+        team.
       </div>{" "}
       <div
         className="relative mt-10 cursor-pointer"

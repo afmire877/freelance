@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useQuizStore from "~/store/quizStore";
 import { type Checklist } from "~/utils/types";
+import { Checkbox } from "./ui/checkbox";
 
 interface Props {
   checklist: Checklist[];
@@ -20,12 +21,10 @@ export default function ChecklistQuestion({ checklist, prompt }: Props) {
       <h1>{prompt}</h1>
       {checklist?.map(({ content }, idx) => {
         return (
-          <div key={idx} className="flex max-w-3xl items-center justify-center">
-            <input
-              type="checkbox"
+          <div key={idx} className="items-top mt-4 flex space-x-2">
+            <Checkbox
               id={`checklist-${idx}`}
-              className="block  rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-              onChange={(e) => {
+              onChange={() => {
                 const newValue = value.map((choice, index) => {
                   if (idx === index) {
                     return !choice;
@@ -42,12 +41,14 @@ export default function ChecklistQuestion({ checklist, prompt }: Props) {
                 });
               }}
             />
-            <label
-              htmlFor={`checklist-${idx}`}
-              className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-            >
-              {content}
-            </label>
+            <div className="grid gap-1.5 leading-none">
+              <label
+                htmlFor={`checklist-${idx}`}
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                {content}
+              </label>
+            </div>
           </div>
         );
       })}
