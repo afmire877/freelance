@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import * as React from "react";
 import GGH from "../assets/ggh.svg";
 import LocalChamp from "../assets/localChampions.svg";
@@ -36,10 +37,10 @@ export default function Intro() {
         This quiz is divided into 6 sections tailored to provide insights about
         your freelancing journey. <br /> Set aside approximately 30 minutes to
         complete the quiz. This ensures you can thoughtfully answer each
-        question. Once you've completed the quiz, you'll receive a personalised
-        report offering suggestions for improvement. <br /> We'll guide you on
-        the next steps, which may include a consultation 1-2-1 call with our
-        team.
+        question. Once you&apos;ve completed the quiz, you&apos;ll receive a
+        personalised report offering suggestions for improvement. <br />{" "}
+        We&apos;ll guide you on the next steps, which may include a consultation
+        1-2-1 call with our team.
       </div>{" "}
       <div
         className="relative mt-10 cursor-pointer"

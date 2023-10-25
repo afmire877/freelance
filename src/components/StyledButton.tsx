@@ -18,6 +18,7 @@ export default function StyledButton({ onClick, label }: IStyledButton) {
     >
       <Image
         loading="lazy"
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         src={ArrowButton}
         className="mb-12 mt-0 aspect-[4.61] w-[341px] max-w-full overflow-hidden object-cover object-center max-md:mb-10"
         alt=""

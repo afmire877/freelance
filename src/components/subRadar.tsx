@@ -1,5 +1,5 @@
 import React from "react";
-import { Radar } from "react-chartjs-2";
+import { type ChartProps, Radar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -9,6 +9,10 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import {
+  type ForwardedRef,
+  type ChartJSOrUndefined,
+} from "react-chartjs-2/dist/types";
 
 ChartJS.register(
   RadialLinearScale,
@@ -19,7 +23,15 @@ ChartJS.register(
   Legend,
 );
 
-export default function SubRadar(props) {
+export default function SubRadar({
+  data: options,
+  ...props
+}: React.JSX.IntrinsicAttributes &
+  Omit<ChartProps<"radar", (number | null)[], unknown>, "type"> & {
+    ref?:
+      | ForwardedRef<ChartJSOrUndefined<"radar", (number | null)[], unknown>>
+      | undefined;
+  }) {
   const data = {
     labels: ["Feedback", "Showcaseing Work", "Keeping Portfolio/CV upto date"],
     datasets: [
@@ -36,5 +48,5 @@ export default function SubRadar(props) {
       },
     ],
   };
-  return <Radar data={data} {...props} />;
+  return <Radar {...props} data={data ?? options} />;
 }
